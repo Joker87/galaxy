@@ -1,1 +1,9 @@
-<galaxy-nx-welcome></galaxy-nx-welcome>
+<div>
+  <ul>
+    <li *ngFor="let item of responses">
+      {{ item.status }}
+    </li>
+  </ul>
+  <button (click)="clickButton.next()">Send all with throttle</button>
+  <button (click)="onClick()" [disabled]="!params">Send with delay</button>
+</div>
